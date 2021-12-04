@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" color-mode="light">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Art Appreciation</title>
+
+        <script>
+            if (
+                localStorage.getItem("color-mode") === "dark" ||
+                (window.matchMedia("(prefers-color-scheme: dark)").matches &&
+                !localStorage.getItem("color-mode"))
+            ) {
+                document.documentElement.setAttribute("color-mode", "dark");
+            }
+        </script>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+    <body>
+        <svg style="display: none;">
+            <symbol viewBox="0 0 24 24" id="moon">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </symbol>
+            <symbol viewBox="0 0 24 24" id="sun">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </symbol>
+        </svg>
+        <main class="color-mode">
+            <section class="color-mode__section">
+                <header class="color-mode__header">
+                
+                    <!-- Button Toggle For Light Mode -->
+                    <button class="color-mode__btn light--hidden" aria-label="Toggle light mode"
+                    >
+                        Toggle Light Mode
+                        <svg aria-hidden="true">
+                            <use href="#sun"></use>
+                        </svg>
+                    </button>
+                    
+                    <!-- Button Toggle For Dark Mode -->
+                    <button class="color-mode__btn dark--hidden" aria-label="Toggle dark mode"
+                    >
+                        Toggle Dark Mode
+                        <svg aria-hidden="true">
+                            <use href="#moon"></use>
+                        </svg>
+                    </button>
+                </header>
+
+                <!-- Light Mode Content Here -->
+                <div class="color-mode__container dark--hidden">
+                    <div class="color-mode__link-container">
+                        <a href="https://github.com/BlackMoFan/artAppreLandingPage" target="_blank" class="color-mode__link fa fa-github"
+                        >
+                            Source Code</a>
+                        <a href="components/members.html" target="blank" class="color-mode__link"><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Group Members</a>
+                    </div>
+                    <h1>Art Exhibit</h1>
+
+                    <!-- Content -->
+
+                    <!-- Arts here -->
+                    <h2>Personal Arts</h2> <!-- Personal Arts -->
+                    <div>
+                        <div>
+                            <img src="images/wallpaper.png">
+                            <h3>Fantasy World</h3>
+                            <p>Artist:  Rod Moreno</p>
+                            <p>Medium: afdasfadsmfaufea</p>
+                            <p>Description: eoeafeaifoewafe</p>
+                        </div>
+                        <div>
+                            <video src="images/video.mp4" controls></video>
+                            <h3>Intro Video</h3>
+                            <p>Artist:  Rod Moreno</p>
+                            <p>Medium: afdasfadsmfaufea</p>
+                            <p>Description: eoeafeaifoewafe</p>
+                        </div>
+                        <div>
+                            <img src="images/waves.jpg">
+                            <h3>Greate Wave Off Kanagawa</h3>
+                            <p>Artist:  <a href="https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa">Katsushika Hokusai<i class="fa fa-external-link" style="margin-left: 10px;"></i></a></p>
+                            <p>Medium: afdasfadsmfaufea</p>
+                            <p>Description: eoeafeaifoewafe</p>
+                        </div>
+                        <div>
+                            <img src="images/codedTerm.png">
+                            <h3>Terminal</h3>
+                            <p>Artist:  Rod Moreno</p>
+                            <p>Medium: afdasfadsmfaufea</p>
+                            <p>Description: eoeafeaifoewafe</p>
+                        </div>
+                        <div>
+                            <img src="images/css.png">
+                            <h3>Trending CSS Lyrics</h3>
+                            <p>Artist:  Rod Moreno</p>
+                            <p>Medium: afdasfadsmfaufea</p>
+                            <p>Description: eoeafeaifoewafe</p>
+                        </div>
+                    </div>
+
+                    <h2>Artsteps</h2> <!-- Artsteps-->
+                    <iframe src="https://www.artsteps.com/embed/6194d12b45cac70a80580c41/560/315" frameborder="0" allowfullscreen></iframe>
+                    <h3>Light Horus Exhibition</h3>
+                    <a href="https://www.artsteps.com/view/6194d12b45cac70a80580c41"><p>On the Web<i class="fa fa-external-link" style="margin-left: 10px;"></i></p></a>
+                </div>
+
+                <!-- Dark Mode Content Here -->
+                <div class="color-mode__container light--hidden">
+                    <div class="color-mode__link-container">
+                        <a href="https://github.com/BlackMoFan/artAppreLandingPage" target="_blank" class="color-mode__link fa fa-github"
+                        >
+                            Source Code</a>
+                        <a href="components/members.html" target="blank" class="color-mode__link"><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Group Members</a>
+                    </div>
+                    <h1>Art Exhibit</h1>
+
+                    <!-- Content -->
+
+                    <!-- Arts here -->
+                    <h2>Personal Arts</h2> <!-- Personal Arts -->
+                    <div>
+                        <div>
+                            <img src="images/wallpaper.png">
+                            <h3>Fantasy World</h3>
+                            <p>Artist:  Rod Moreno</p>
+                            <p>Medium: afdasfadsmfaufea</p>
+                            <p>Description: eoeafeaifoewafe</p>
+                        </div>
+                        <div>
+                            <video src="images/video.mp4" controls></video>
+                            <h3>Intro Video</h3>
+                            <p>Artist:  Rod Moreno</p>
+                            <p>Medium: afdasfadsmfaufea</p>
+                            <p>Description: eoeafeaifoewafe</p>
+                        </div>
+                        <div>
+                            <img src="images/waves.jpg">
+                            <h3>Greate Wave Off Kanagawa</h3>
+                            <p>Artist:  <a href="https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa">Katsushika Hokusai<i class="fa fa-external-link" style="margin-left: 10px;"></i></a></p>
+                            <p>Medium: afdasfadsmfaufea</p>
+                            <p>Description: eoeafeaifoewafe</p>
+                        </div>
+                        <div>
+                            <img src="images/codedTerm.png">
+                            <h3>Terminal</h3>
+                            <p>Artist:  Rod Moreno</p>
+                            <p>Medium: afdasfadsmfaufea</p>
+                            <p>Description: eoeafeaifoewafe</p>
+                        </div>
+                        <div>
+                            <img src="images/css.png">
+                            <h3>Trending CSS Lyrics</h3>
+                            <p>Artist:  Rod Moreno</p>
+                            <p>Medium: afdasfadsmfaufea</p>
+                            <p>Description: eoeafeaifoewafe</p>
+                        </div>
+                    </div>
+
+                    <h2>Artsteps</h2> <!-- Artsteps-->
+                    <iframe src="https://www.artsteps.com/embed/6194d12b45cac70a80580c41/560/315" frameborder="0" allowfullscreen></iframe>
+                    <h3>Light Horus Exhibition</h3>
+                    <a href="https://www.artsteps.com/view/6194d12b45cac70a80580c41"><p>On the Web<i class="fa fa-external-link" style="margin-left: 10px;"></i></p></a>
+                </div>
+
+            </section>
+            
+        </main>
+        
+        <script src="js/darkMode.js"></script>
+    </body>
+</html>
