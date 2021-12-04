@@ -1,234 +1,241 @@
 <!DOCTYPE html>
 <html lang="en" color-mode="light">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Art Appreciation</title>
 
-        <script>
-            if (
-                localStorage.getItem("color-mode") === "dark" ||
-                (window.matchMedia("(prefers-color-scheme: dark)").matches &&
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Appreciation</title>
+
+    <script>
+        if (
+            localStorage.getItem("color-mode") === "dark" ||
+            (window.matchMedia("(prefers-color-scheme: dark)").matches &&
                 !localStorage.getItem("color-mode"))
-            ) {
-                document.documentElement.setAttribute("color-mode", "dark");
-            }
-        </script>
-        
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/styles.css" />
-    </head>
-    <body>
-        <svg style="display: none;">
-            <symbol viewBox="0 0 24 24" id="moon">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </symbol>
-            <symbol viewBox="0 0 24 24" id="sun">
-                <circle cx="12" cy="12" r="5"></circle>
-                <line x1="12" y1="1" x2="12" y2="3"></line>
-                <line x1="12" y1="21" x2="12" y2="23"></line>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                <line x1="1" y1="12" x2="3" y2="12"></line>
-                <line x1="21" y1="12" x2="23" y2="12"></line>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </symbol>
-        </svg>
-        <main class="color-mode">
-            <section class="color-mode__section">
-                <header class="color-mode__header">
-                
-                    <!-- Button Toggle For Light Mode -->
-                    <button class="color-mode__btn light--hidden" aria-label="Toggle light mode"
-                    >
-                        Toggle Light Mode
-                        <svg aria-hidden="true">
-                            <use href="#sun"></use>
-                        </svg>
-                    </button>
-                    
-                    <!-- Button Toggle For Dark Mode -->
-                    <button class="color-mode__btn dark--hidden" aria-label="Toggle dark mode"
-                    >
-                        Toggle Dark Mode
-                        <svg aria-hidden="true">
-                            <use href="#moon"></use>
-                        </svg>
-                    </button>
-                </header>
+        ) {
+            document.documentElement.setAttribute("color-mode", "dark");
+        }
+    </script>
 
-                <!-- Light Mode Content Here -->
-                <div class="color-mode__container dark--hidden">
-                    <div class="color-mode__link-container">
-                        <a href="https://github.com/BlackMoFan/artAppreciationLandingPage" target="_blank" class="color-mode__link fa fa-github"
-                        >
-                            Source Code</a>
-                        <a href="components/members.html" target="blank" class="color-mode__link"><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Group Members</a>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <svg style="display: none;">
+        <symbol viewBox="0 0 24 24" id="moon">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </symbol>
+        <symbol viewBox="0 0 24 24" id="sun">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </symbol>
+    </svg>
+    <main class="color-mode">
+        <section class="color-mode__section">
+            <header class="color-mode__header">
+
+                <!-- Button Toggle For Light Mode -->
+                <button class="color-mode__btn light--hidden" aria-label="Toggle light mode">
+                    <!-- Toggle Light Mode -->
+                    <svg aria-hidden="true">
+                        <use href="#sun"></use>
+                    </svg>
+                </button>
+
+                <!-- Button Toggle For Dark Mode -->
+                <button class="color-mode__btn dark--hidden" aria-label="Toggle dark mode">
+                    <!-- Toggle Dark Mode -->
+                    <svg aria-hidden="true">
+                        <use href="#moon"></use>
+                    </svg>
+                </button>
+            </header>
+
+            <!-- Light Mode Content Here -->
+            <div class="color-mode__container dark--hidden">
+                <div class="color-mode__link-container">
+                    <a href="https://github.com/BlackMoFan/artAppreciationLandingPage" target="_blank" class="color-mode__link fa fa-github">
+                        Source Code</a>
+                    <a href="components/members.html" target="blank" class="color-mode__link"><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Group Members</a>
+                </div>
+                <h1>Art Exhibit</h1>
+
+                <!-- Content -->
+
+                <!-- Arts here -->
+                <h2>Personal Arts</h2> <!-- Personal Arts -->
+                <div>
+                    <div class="color-mode__excerpt">
+                        <img src="images/mona-lisa.jpg">
+                        <h3><a href="https://en.wikipedia.org/wiki/Mona_Lisa">Mona Lisa<i class="fa fa-external-link" style="margin-left: 10px;"></i></a></h3>
+                        <p>Artist: Leonardo Da Vinci</p>
+                        <p>Medium: Painting</p>
+                        <p>Painted between 1503 and 1517, Da Vinci’s alluring portrait has been dogged by two questions
+                            since the day it was made: Who’s the subject and why is she smiling? A number of theories for the former
+                            have been proffered over the years: That she’s the wife of the Florentine merchant Francesco di Bartolomeo
+                            del Giocondo (ergo, the work’s alternative title, La Gioconda); that she's Leonardo’s mother, Caterina, conjured
+                            from Leonardo's boyhood memories of her; and finally, that it's a self-portrait in drag. As for that famous
+                            smile, its enigmatic quality has driven people crazy for centuries. Whatever the reason, Mona Lisa’s look of
+                            preternatural calm comports with the idealized landscape behind her, which dissolves into the distance through
+                            Leonardo’s use of atmospheric perspective.</p>
                     </div>
-                    <h1>Art Exhibit</h1>
-
-                    <!-- Content -->
-
-                    <!-- Arts here -->
-                    <h2>Personal Arts</h2> <!-- Personal Arts -->
-                    <div>
-                        <div>
-                            <img src="images/mona-lisa.jpg">
-                            <h3>Mona Lisa</h3>
-                            <p>Artist:  Leonardo Da Vinci</p>
-                            <p>Medium: Painting</p>
-                            <p>Description: Painted between 1503 and 1517, Da Vinci’s alluring portrait has been dogged by two questions 
-                                since the day it was made: Who’s the subject and why is she smiling? A number of theories for the former 
-                                have been proffered over the years: That she’s the wife of the Florentine merchant Francesco di Bartolomeo 
-                                del Giocondo (ergo, the work’s alternative title, La Gioconda); that she's Leonardo’s mother, Caterina, conjured 
-                                from Leonardo's boyhood memories of her; and finally, that it's a self-portrait in drag. As for that famous 
-                                smile, its enigmatic quality has driven people crazy for centuries. Whatever the reason, Mona Lisa’s look of 
-                                preternatural calm comports with the idealized landscape behind her, which dissolves into the distance through 
-                                Leonardo’s use of atmospheric perspective.</p>
-                        </div>
-                        <div>
-                            <video src="images/video.mp4" controls></video>
-                            <h3>Intro Video</h3>
-                            <p>Artist:  Rod Moreno</p>
-                            <p>Medium: afdasfadsmfaufea</p>
-                            <p>Description: eoeafeaifoewafe</p>
-                        </div>
-                        <div>
-                            <img src="images/waves.jpg">
-                            <h3>Greate Wave Off Kanagawa</h3>
-                            <p>Artist:  <a href="https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa">Katsushika Hokusai<i class="fa fa-external-link" style="margin-left: 10px;"></i></a></p>
-                            <p>Medium: Japanese woodblock printing</p>
-                            <p>Description: The Great Wave off Kanagawa (Japanese: 神奈川沖浪裏, Hepburn: Kanagawa-oki Nami Ura, lit. 
-                                "Under the Wave off Kanagawa"), also known as The Great Wave otherwise known as, The Wave, is a woodblock 
-                                print by the Japanese ukiyo-e artist Hokusai. It was published sometime between 1829 and 1833 in the late 
-                                Edo period as the first print in Hokusai's series Thirty-six Views of Mount Fuji. The image depicts an enormous 
-                                wave threatening three boats off the coast in the Sagami Bay (Kanagawa Prefecture) while Mount Fuji rises in the 
-                                background. Sometimes assumed to be a tsunami, the wave is more likely to be a large rogue wave.
-                                It is Hokusai's most famous work and is often considered the most recognizable work of Japanese art in the world.</p>
-                        </div>
-                        <div>
-                            <img src="images/girl-with-a-pearl.jpg">
-                            <h3>Girl with a Pearl Earring</h3>
-                            <p>Artist:  Johannes Vermeer</p>
-                            <p>Medium: Painting</p>
-                            <p>Description: Johannes Vermeer’s 1665 study of a young woman is startlingly real and startlingly modern, 
-                                almost as if it were a photograph. This gets into the debate over whether or not Vermeer employed a pre-photographic 
-                                device called a camera obscura to create the image. Leaving that aside, the sitter is unknown, though it’s 
-                                been speculated that she might have been Vermeer's maid. He portrays her looking over her shoulder, locking her 
-                                eyes with the viewer as if attempting to establish an intimate connection across the centuries. Technically 
-                                speaking, Girl isn’t a portrait, but rather an example of the Dutch genre called a tronie—a headshot meant more 
-                                as still life of facial features than as an attempt to capture a likeness.</p>
-                        </div>
-                        <div>
-                            <img src="images/starry night.jpg">
-                            <h3>The Starry Night</h3>
-                            <p>Artist:  Vincent van Gogh</p>
-                            <p>Medium: Painting</p>
-                            <p>Description: Vincent Van Gogh’s most popular painting, The Starry Night was created by Van Gogh at the asylum in 
-                                Saint-Rémy, where he’d committed himself in 1889. Indeed, The Starry Night seems to reflect his turbulent state 
-                                of mind at the time, as the night sky comes alive with swirls and orbs of frenetically applied brush marks springing 
-                                from the yin and yang of his personal demons and awe of nature.
-                            </p>
-                        </div>
+                    <div class="color-mode__excerpt">
+                        <video src="images/video.mp4" controls></video>
+                        <h3>Intro Video</h3>
+                        <p>Artist: Rod Moreno</p>
+                        <p>Medium: afdasfadsmfaufea</p>
+                        <p>eoeafeaifoewafe</p>
                     </div>
+                    <div class="color-mode__excerpt">
+                        <img src="images/waves.jpg">
+                        <h3><a href="https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa">Greate Wave Off Kanagawa<i class="fa fa-external-link" style="margin-left: 10px;"></i></a></h3>
+                        <p>Artist: Katsushika Hokusai</p>
+                        <p>Medium: Japanese woodblock printing</p>
+                        <p>The Great Wave off Kanagawa (Japanese: 神奈川沖浪裏, Hepburn: Kanagawa-oki Nami Ura, lit.
+                            "Under the Wave off Kanagawa"), also known as The Great Wave otherwise known as, The Wave, is a woodblock
+                            print by the Japanese ukiyo-e artist Hokusai. It was published sometime between 1829 and 1833 in the late
+                            Edo period as the first print in Hokusai's series Thirty-six Views of Mount Fuji. The image depicts an enormous
+                            wave threatening three boats off the coast in the Sagami Bay (Kanagawa Prefecture) while Mount Fuji rises in the
+                            background. Sometimes assumed to be a tsunami, the wave is more likely to be a large rogue wave.
+                            It is Hokusai's most famous work and is often considered the most recognizable work of Japanese art in the world.</p>
+                    </div>
+                    <div class="color-mode__excerpt">
+                        <img src="images/girl-with-a-pearl.jpg">
+                        <h3><a href="https://en.wikipedia.org/wiki/Girl_with_a_Pearl_Earring">Girl with a Pearl Earring<i class="fa fa-external-link" style="margin-left: 10px;"></i></a></h3>
+                        <p>Artist: Johannes Vermeer</p>
+                        <p>Medium: Painting</p>
+                        <p>Johannes Vermeer’s 1665 study of a young woman is startlingly real and startlingly modern,
+                            almost as if it were a photograph. This gets into the debate over whether or not Vermeer employed a pre-photographic
+                            device called a camera obscura to create the image. Leaving that aside, the sitter is unknown, though it’s
+                            been speculated that she might have been Vermeer's maid. He portrays her looking over her shoulder, locking her
+                            eyes with the viewer as if attempting to establish an intimate connection across the centuries. Technically
+                            speaking, Girl isn’t a portrait, but rather an example of the Dutch genre called a tronie—a headshot meant more
+                            as still life of facial features than as an attempt to capture a likeness.</p>
+                    </div>
+                    <div class="color-mode__excerpt">
+                        <img src="images/starry night.jpg">
+                        <h3><a href="https://en.wikipedia.org/wiki/The_Starry_Night">The Starry Night<i class="fa fa-external-link" style="margin-left: 10px;"></i></a></h3>
+                        <p>Artist: Vincent van Gogh</p>
+                        <p>Medium: Painting</p>
+                        <p>Vincent Van Gogh’s most popular painting, The Starry Night was created by Van Gogh at the asylum in
+                            Saint-Rémy, where he’d committed himself in 1889. Indeed, The Starry Night seems to reflect his turbulent state
+                            of mind at the time, as the night sky comes alive with swirls and orbs of frenetically applied brush marks springing
+                            from the yin and yang of his personal demons and awe of nature.
+                        </p>
+                    </div>
+                </div>
 
-                    <h2>Artsteps</h2> <!-- Artsteps-->
+                <h2>Artsteps</h2> <!-- Artsteps-->
+                <div class="color-mode__excerpt">
                     <div class="iframe-container">
                         <iframe class="responsive-iframe" src="https://www.artsteps.com/embed/6194d12b45cac70a80580c41/560/315" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <h3>Light Horus Exhibition</h3>
-                    <a href="https://www.artsteps.com/view/6194d12b45cac70a80580c41"><p>On the Web<i class="fa fa-external-link" style="margin-left: 10px;"></i></p></a>
+                    <a href="https://www.artsteps.com/view/6194d12b45cac70a80580c41">
+                        <p>On the Web<i class="fa fa-external-link" style="margin-left: 10px;"></i></p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Dark Mode Content Here -->
+            <div class="color-mode__container light--hidden">
+                <div class="color-mode__link-container">
+                    <a href="https://github.com/BlackMoFan/artAppreciationLandingPage" target="_blank" class="color-mode__link fa fa-github">
+                        Source Code</a>
+                    <a href="components/members.html" target="blank" class="color-mode__link"><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Group Members</a>
+                </div>
+                <h1>Art Exhibit</h1>
+
+                <!-- Content -->
+
+                <!-- Arts here -->
+                <h2>Personal Arts</h2> <!-- Personal Arts -->
+                <div>
+                    <div class="color-mode__excerpt">
+                        <img src="images/mona-lisa.jpg">
+                        <h3><a href="https://en.wikipedia.org/wiki/Mona_Lisa">Mona Lisa<i class="fa fa-external-link" style="margin-left: 10px;"></i></a></h3>
+                        <p>Artist: Leonardo Da Vinci</p>
+                        <p>Medium: Painting</p>
+                        <p>Painted between 1503 and 1517, Da Vinci’s alluring portrait has been dogged by two questions
+                            since the day it was made: Who’s the subject and why is she smiling? A number of theories for the former
+                            have been proffered over the years: That she’s the wife of the Florentine merchant Francesco di Bartolomeo
+                            del Giocondo (ergo, the work’s alternative title, La Gioconda); that she's Leonardo’s mother, Caterina, conjured
+                            from Leonardo's boyhood memories of her; and finally, that it's a self-portrait in drag. As for that famous
+                            smile, its enigmatic quality has driven people crazy for centuries. Whatever the reason, Mona Lisa’s look of
+                            preternatural calm comports with the idealized landscape behind her, which dissolves into the distance through
+                            Leonardo’s use of atmospheric perspective.</p>
+                    </div>
+                    <div class="color-mode__excerpt">
+                        <video src="images/video.mp4" controls></video>
+                        <h3>Intro Video</h3>
+                        <p>Artist: Rod Moreno</p>
+                        <p>Medium: afdasfadsmfaufea</p>
+                        <p>eoeafeaifoewafe</p>
+                    </div>
+                    <div class="color-mode__excerpt">
+                        <img src="images/waves.jpg">
+                        <h3><a href="https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa">Greate Wave Off Kanagawa<i class="fa fa-external-link" style="margin-left: 10px;"></i></a></h3>
+                        <p>Artist: Katsushika Hokusai</p>
+                        <p>Medium: Japanese woodblock printing</p>
+                        <p>The Great Wave off Kanagawa (Japanese: 神奈川沖浪裏, Hepburn: Kanagawa-oki Nami Ura, lit.
+                            "Under the Wave off Kanagawa"), also known as The Great Wave otherwise known as, The Wave, is a woodblock
+                            print by the Japanese ukiyo-e artist Hokusai. It was published sometime between 1829 and 1833 in the late
+                            Edo period as the first print in Hokusai's series Thirty-six Views of Mount Fuji. The image depicts an enormous
+                            wave threatening three boats off the coast in the Sagami Bay (Kanagawa Prefecture) while Mount Fuji rises in the
+                            background. Sometimes assumed to be a tsunami, the wave is more likely to be a large rogue wave.
+                            It is Hokusai's most famous work and is often considered the most recognizable work of Japanese art in the world.</p>
+                    </div>
+                    <div class="color-mode__excerpt">
+                        <img src="images/girl-with-a-pearl.jpg">
+                        <h3><a href="https://en.wikipedia.org/wiki/Girl_with_a_Pearl_Earring">Girl with a Pearl Earring<i class="fa fa-external-link" style="margin-left: 10px;"></i></a></h3>
+                        <p>Artist: Johannes Vermeer</p>
+                        <p>Medium: Painting</p>
+                        <p>Johannes Vermeer’s 1665 study of a young woman is startlingly real and startlingly modern,
+                            almost as if it were a photograph. This gets into the debate over whether or not Vermeer employed a pre-photographic
+                            device called a camera obscura to create the image. Leaving that aside, the sitter is unknown, though it’s
+                            been speculated that she might have been Vermeer's maid. He portrays her looking over her shoulder, locking her
+                            eyes with the viewer as if attempting to establish an intimate connection across the centuries. Technically
+                            speaking, Girl isn’t a portrait, but rather an example of the Dutch genre called a tronie—a headshot meant more
+                            as still life of facial features than as an attempt to capture a likeness.</p>
+                    </div>
+                    <div class="color-mode__excerpt">
+                        <img src="images/starry night.jpg">
+                        <h3><a href="https://en.wikipedia.org/wiki/The_Starry_Night">The Starry Night<i class="fa fa-external-link" style="margin-left: 10px;"></i></a></h3>
+                        <p>Artist: Vincent van Gogh</p>
+                        <p>Medium: Painting</p>
+                        <p>Vincent Van Gogh’s most popular painting, The Starry Night was created by Van Gogh at the asylum in
+                            Saint-Rémy, where he’d committed himself in 1889. Indeed, The Starry Night seems to reflect his turbulent state
+                            of mind at the time, as the night sky comes alive with swirls and orbs of frenetically applied brush marks springing
+                            from the yin and yang of his personal demons and awe of nature.
+                        </p>
+                    </div>
                 </div>
 
-                <!-- Dark Mode Content Here -->
-                <div class="color-mode__container light--hidden">
-                    <div class="color-mode__link-container">
-                        <a href="https://github.com/BlackMoFan/artAppreciationLandingPage" target="_blank" class="color-mode__link fa fa-github"
-                        >
-                            Source Code</a>
-                        <a href="components/members.html" target="blank" class="color-mode__link"><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Group Members</a>
-                    </div>
-                    <h1>Art Exhibit</h1>
-
-                    <!-- Content -->
-
-                    <!-- Arts here -->
-                    <h2>Personal Arts</h2> <!-- Personal Arts -->
-                    <div>
-                        <div>
-                            <img src="images/mona-lisa.jpg">
-                            <h3>Mona Lisa</h3>
-                            <p>Artist:  Leonardo Da Vinci</p>
-                            <p>Medium: Painting</p>
-                            <p>Description: Painted between 1503 and 1517, Da Vinci’s alluring portrait has been dogged by two questions 
-                                since the day it was made: Who’s the subject and why is she smiling? A number of theories for the former 
-                                have been proffered over the years: That she’s the wife of the Florentine merchant Francesco di Bartolomeo 
-                                del Giocondo (ergo, the work’s alternative title, La Gioconda); that she's Leonardo’s mother, Caterina, conjured 
-                                from Leonardo's boyhood memories of her; and finally, that it's a self-portrait in drag. As for that famous 
-                                smile, its enigmatic quality has driven people crazy for centuries. Whatever the reason, Mona Lisa’s look of 
-                                preternatural calm comports with the idealized landscape behind her, which dissolves into the distance through 
-                                Leonardo’s use of atmospheric perspective.</p>
-                        </div>
-                        <div>
-                            <video src="images/video.mp4" controls></video>
-                            <h3>Intro Video</h3>
-                            <p>Artist:  Rod Moreno</p>
-                            <p>Medium: afdasfadsmfaufea</p>
-                            <p>Description: eoeafeaifoewafe</p>
-                        </div>
-                        <div>
-                            <img src="images/waves.jpg">
-                            <h3>Greate Wave Off Kanagawa</h3>
-                            <p>Artist:  <a href="https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa">Katsushika Hokusai<i class="fa fa-external-link" style="margin-left: 10px;"></i></a></p>
-                            <p>Medium: Japanese woodblock printing</p>
-                            <p>Description: The Great Wave off Kanagawa (Japanese: 神奈川沖浪裏, Hepburn: Kanagawa-oki Nami Ura, lit. 
-                                "Under the Wave off Kanagawa"), also known as The Great Wave otherwise known as, The Wave, is a woodblock 
-                                print by the Japanese ukiyo-e artist Hokusai. It was published sometime between 1829 and 1833 in the late 
-                                Edo period as the first print in Hokusai's series Thirty-six Views of Mount Fuji. The image depicts an enormous 
-                                wave threatening three boats off the coast in the Sagami Bay (Kanagawa Prefecture) while Mount Fuji rises in the 
-                                background. Sometimes assumed to be a tsunami, the wave is more likely to be a large rogue wave.
-                                It is Hokusai's most famous work and is often considered the most recognizable work of Japanese art in the world.</p>
-                        </div>
-                        <div>
-                            <img src="images/girl-with-a-pearl.jpg">
-                            <h3>Girl with a Pearl Earring</h3>
-                            <p>Artist:  Johannes Vermeer</p>
-                            <p>Medium: Painting</p>
-                            <p>Description: Johannes Vermeer’s 1665 study of a young woman is startlingly real and startlingly modern, 
-                                almost as if it were a photograph. This gets into the debate over whether or not Vermeer employed a pre-photographic 
-                                device called a camera obscura to create the image. Leaving that aside, the sitter is unknown, though it’s 
-                                been speculated that she might have been Vermeer's maid. He portrays her looking over her shoulder, locking her 
-                                eyes with the viewer as if attempting to establish an intimate connection across the centuries. Technically 
-                                speaking, Girl isn’t a portrait, but rather an example of the Dutch genre called a tronie—a headshot meant more 
-                                as still life of facial features than as an attempt to capture a likeness.</p>
-                        </div>
-                        <div>
-                            <img src="images/starry night.jpg">
-                            <h3>The Starry Night</h3>
-                            <p>Artist:  Vincent van Gogh</p>
-                            <p>Medium: Painting</p>
-                            <p>Description: Vincent Van Gogh’s most popular painting, The Starry Night was created by Van Gogh at the asylum in 
-                                Saint-Rémy, where he’d committed himself in 1889. Indeed, The Starry Night seems to reflect his turbulent state 
-                                of mind at the time, as the night sky comes alive with swirls and orbs of frenetically applied brush marks springing 
-                                from the yin and yang of his personal demons and awe of nature.
-                            </p>
-                        </div>
-                    </div>
-
-                    <h2>Artsteps</h2> <!-- Artsteps-->
+                <h2>Artsteps</h2> <!-- Artsteps-->
+                <div class="color-mode__excerpt">
                     <div class="iframe-container">
                         <iframe class="responsive-iframe" src="https://www.artsteps.com/embed/6194d12b45cac70a80580c41/560/315" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <h3>Light Horus Exhibition</h3>
-                    <a href="https://www.artsteps.com/view/6194d12b45cac70a80580c41"><p>On the Web<i class="fa fa-external-link" style="margin-left: 10px;"></i></p></a>
+                    <a href="https://www.artsteps.com/view/6194d12b45cac70a80580c41">
+                        <p>On the Web<i class="fa fa-external-link" style="margin-left: 10px;"></i></p>
+                    </a>
                 </div>
+            </div>
 
-            </section>
-            
-        </main>
-        
-        <script src="js/darkMode.js"></script>
-    </body>
+        </section>
+
+    </main>
+
+    <script src="js/darkMode.js"></script>
+</body>
+
 </html>

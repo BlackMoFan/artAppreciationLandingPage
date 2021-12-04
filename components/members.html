@@ -1,115 +1,114 @@
 <!DOCTYPE html>
 <html lang="en" color-mode="light">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Members</title>
 
-        <script>
-            if (
-                localStorage.getItem("color-mode") === "dark" ||
-                (window.matchMedia("(prefers-color-scheme: dark)").matches &&
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members</title>
+
+    <script>
+        if (
+            localStorage.getItem("color-mode") === "dark" ||
+            (window.matchMedia("(prefers-color-scheme: dark)").matches &&
                 !localStorage.getItem("color-mode"))
-            ) {
-                document.documentElement.setAttribute("color-mode", "dark");
-            }
-        </script>
-        
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="../css/styles.css" />
-    </head>
-    <body>
-        <svg style="display: none;">
-            <symbol viewBox="0 0 24 24" id="moon">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </symbol>
-            <symbol viewBox="0 0 24 24" id="sun">
-                <circle cx="12" cy="12" r="5"></circle>
-                <line x1="12" y1="1" x2="12" y2="3"></line>
-                <line x1="12" y1="21" x2="12" y2="23"></line>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                <line x1="1" y1="12" x2="3" y2="12"></line>
-                <line x1="21" y1="12" x2="23" y2="12"></line>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </symbol>
-        </svg>
-        <main class="color-mode">
-            <section class="color-mode__section">
-                <header class="color-mode__header">
-                
-                    <!-- Button Toggle For Light Mode -->
-                    <button class="color-mode__btn light--hidden" aria-label="Toggle light mode"
-                    >
-                        Toggle Light Mode
-                        <svg aria-hidden="true">
-                            <use href="#sun"></use>
-                        </svg>
-                    </button>
+        ) {
+            document.documentElement.setAttribute("color-mode", "dark");
+        }
+    </script>
 
-                    <!-- Button Toggle For Dark Mode -->
-                    <button class="color-mode__btn dark--hidden" aria-label="Toggle dark mode"
-                    >
-                        Toggle Dark Mode
-                        <svg aria-hidden="true">
-                            <use href="#moon"></use>
-                        </svg>
-                    </button>
-                </header>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
 
-                    <!-- Light Mode Content Here -->
-                    <div class="color-mode__container dark--hidden">
-                        <div class="color-mode__link-container">
-                            <a href="https://github.com/BlackMoFan/artAppreciationLandingPage" target="_blank" class="color-mode__link fa fa-github"
-                            >
-                                Source Code</a>
-                            <a href="../index.html" target="blank" class="color-mode__link"><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Exhibit</a>
-                        </div>
-                        <h2 >Leader</h2>
-                        <ul class="fa-ul">
-                            <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Neil Clarence Diaz</li>
-                        </ul>
-                        <h2>Members</h2>
-                        <ul class="fa-ul">
-                            <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Charmaine Love Talamera</li>
-                            <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Danny Lloyd Damgo</li>
-                            <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Dianne Ritz Lapasaran</li>
-                            <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Jazmin Olvido Cortez</li>
-                            <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Joe Gison</li>
-                            <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Kenji John Sondia</li>
-                            <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Rod Lester Moreno</li>
-                        </ul>
-                    </div>
+<body>
+    <svg style="display: none;">
+        <symbol viewBox="0 0 24 24" id="moon">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </symbol>
+        <symbol viewBox="0 0 24 24" id="sun">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </symbol>
+    </svg>
+    <main class="color-mode">
+        <section class="color-mode__section">
+            <header class="color-mode__header">
 
-                    <!-- Dark Mode Content Here -->
-                    <div class="color-mode__container light--hidden">
-                        <div class="color-mode__link-container">
-                            <a href="https://github.com/BlackMoFan/artAppreciationLandingPage" target="_blank" class="color-mode__link fa fa-github"
-                            >
-                                Source Code</a>
-                            <a href="../index.html" target="blank" class="color-mode__link"><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Exhibit</a>
-                        </div>
-                        <h2 >Leader</h2>
-                        <ul class="fa-ul">
-                            <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Neil Clarence Diaz</li>
-                        </ul>
-                        <h2>Members</h2>
-                        <ul class="fa-ul">
-                            <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Charmaine Love Talamera</li>
-                            <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Danny Lloyd Damgo</li>
-                            <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Dianne Ritz Lapasaran</li>
-                            <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Jazmin Olvido Cortez</li>
-                            <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Joe Gison</li>
-                            <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Kenji John Sondia</li>
-                            <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Rod Lester Moreno</li>
-                        </ul>
-                    </div>
-                
-            </section>
-        </main>
+                <!-- Button Toggle For Light Mode -->
+                <button class="color-mode__btn light--hidden" aria-label="Toggle light mode">
+                    <!-- Toggle Light Mode -->
+                    <svg aria-hidden="true">
+                        <use href="#sun"></use>
+                    </svg>
+                </button>
 
-        <script src="../js/darkMode.js"></script>
-    </body>
+                <!-- Button Toggle For Dark Mode -->
+                <button class="color-mode__btn dark--hidden" aria-label="Toggle dark mode">
+                    <!-- Toggle Dark Mode -->
+                    <svg aria-hidden="true">
+                        <use href="#moon"></use>
+                    </svg>
+                </button>
+            </header>
+
+            <!-- Light Mode Content Here -->
+            <div class="color-mode__container dark--hidden">
+                <div class="color-mode__link-container">
+                    <a href="https://github.com/BlackMoFan/artAppreciationLandingPage" target="_blank" class="color-mode__link fa fa-github">
+                        Source Code</a>
+                    <a href="../index.html" target="blank" class="color-mode__link"><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Exhibit</a>
+                </div>
+                <h2>Leader</h2>
+                <ul class="fa-ul">
+                    <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Neil Clarence Diaz</li>
+                </ul>
+                <h2>Members</h2>
+                <ul class="fa-ul">
+                    <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Charmaine Love Talamera</li>
+                    <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Danny Lloyd Damgo</li>
+                    <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Dianne Ritz Lapasaran</li>
+                    <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Jazmin Olvido Cortez</li>
+                    <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Joe Gison</li>
+                    <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Kenji John Sondia</li>
+                    <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Rod Lester Moreno</li>
+                </ul>
+            </div>
+
+            <!-- Dark Mode Content Here -->
+            <div class="color-mode__container light--hidden">
+                <div class="color-mode__link-container">
+                    <a href="https://github.com/BlackMoFan/artAppreciationLandingPage" target="_blank" class="color-mode__link fa fa-github">
+                        Source Code</a>
+                    <a href="../index.html" target="blank" class="color-mode__link"><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Exhibit</a>
+                </div>
+                <h2>Leader</h2>
+                <ul class="fa-ul">
+                    <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Neil Clarence Diaz</li>
+                </ul>
+                <h2>Members</h2>
+                <ul class="fa-ul">
+                    <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Charmaine Love Talamera</li>
+                    <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Danny Lloyd Damgo</li>
+                    <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Dianne Ritz Lapasaran</li>
+                    <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Jazmin Olvido Cortez</li>
+                    <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Joe Gison</li>
+                    <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Kenji John Sondia</li>
+                    <li><span style="margin: 5px;"><i class="fa fa-rocket"></i></span>Rod Lester Moreno</li>
+                </ul>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="../js/darkMode.js"></script>
+</body>
+
 </html>
