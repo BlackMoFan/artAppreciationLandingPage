@@ -51,7 +51,20 @@ body {
 
 body::after {
     content: "";
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/wallpaper.jpg");
+
+    /* background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/wallpaper.jpg"); */
+    
+    background-image: linear-gradient(#c33764,#1d2671);
+
+    /* https://cssgradient.io/gradient-backgrounds/ - Evening Sunshine */
+        /* fallback for old browsers */
+    /* background: #b92b27;   */
+        /* Chrome 10-25, Safari 5.1-6 */
+    /* background: -webkit-linear-gradient(to top, #1565C0, #b92b27);   */
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* background: linear-gradient(to top, #1565C0, #b92b27);  */
+
+
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.8;
