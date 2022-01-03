@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap');
+
+@font-face
+{
+    font-family: 'Helmet Regular';
+    font-weight: normal;
+    font-style: normal;
+    src: url('fonts/helmet-cufonfonts-webfont/Helmet-Regular.woff');
+}
 
 :root {
     --radius: 50px;
     /* --sans: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu,
       cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
-    --sans: 'Playfair Display';
+    --sans: 'Chivo';
 }
 
 /* :root[color-mode="light"] {
@@ -78,6 +87,12 @@ body::after {
     z-index: -1;   
 }
 
+img, video {
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+}
+
 .color-mode {
     display: flex;
     align-items: baseline;
@@ -114,8 +129,10 @@ body::after {
     width: 100%;
     height: 5px;
     content: "";
-    background: linear-gradient(to right, #01408e, #3c5d5c);
-    background: linear-gradient(to right, var(--primary, #01408e), var(--secondary, #3c5d5c));
+    /* background: linear-gradient(to right, #01408e, #3c5d5c);
+    background: linear-gradient(to right, var(--primary, #01408e), var(--secondary, #3c5d5c)); */
+    background-color: #f39f86;
+    background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
 }
 
 .color-mode__btn {
@@ -178,19 +195,49 @@ body::after {
     }
 }
 
+.header-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    /* max-width: 100%;
+    height: auto;
+    width: auto\9; */
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 .color-mode h1 {
     text-align: center;
     font-weight: bold;
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     font-size: 2.5rem;
     line-height: 1.1;
 }
 
 .color-mode h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 60px;
     color: #222222;
     color: var(--element2, #222222);
     font-weight: bold;
+}
+
+/* members */
+.role {
+    text-align: left;
+    color: #222222;
+    color: var(--element2, #222222);
+    font-weight: bold;
+}
+
+.color-mode h3 {
+    text-align: center;
 }
 
 .color-mode__link-container {
@@ -225,6 +272,17 @@ body::after {
     background-color: var(--primary, #01408e);
 }
 
+.link-to-local-page {
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #e6e6e6;
+    background-color: var(--surface1, #e6e6e6);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 1rem;
+}
+
 .color-mode__excerpt {
     padding: 0.5rem 1.5rem;
     margin: 1rem;
@@ -235,6 +293,10 @@ body::after {
     border-radius: var(--radius);
 }
 
+.color-mode__excerpt h4 {
+    text-align: center;
+}
+
 @media (min-width: 640px) {
     .color-mode__excerpt {
         padding: 1rem 2rem;
@@ -242,20 +304,107 @@ body::after {
     }
 }
 
-.color-mode img, video{
+.color-mode .imageItem{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    max-width: 100%;
+    /* max-width: 100%;
     height: auto;
-    width: auto\9;
+    width: auto\9; */
     margin-top: 50px;
     border: 5px solid #555;
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+.myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
 
 .color-mode h3, p{
     text-align: center;
