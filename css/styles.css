@@ -54,6 +54,15 @@ html {
     background-color: var(--surface1, #e6e6e6);
 }
 
+/* https://css-tricks.com/perfect-full-page-background-image/ */
+.site-html {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/wallpaper.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -93,7 +102,7 @@ body::after {
     background-size: cover;
 }
 
-img, video {
+img, video, iframe {
     max-width: 100%;
     height: auto;
     width: auto\9;
@@ -331,7 +340,7 @@ img, video {
     }
 }
 
-.color-mode .imageItem{
+.imageItem{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -448,6 +457,12 @@ img, video {
     overflow: hidden;
     width: 100%;
     padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+.iframe-container-yt {
+    position: relative;
+    overflow: hidden;
+    /* width: 100%; */
 }
   
 /* Then style the iframe to fit in the container div with full height and width */
