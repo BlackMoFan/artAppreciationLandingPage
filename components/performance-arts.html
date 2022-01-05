@@ -17,11 +17,15 @@
         }
     </script>
 
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/styles.css" />
 </head>
 
-<body>
+<body class="site-body">
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
     <svg style="display: none;">
         <symbol viewBox="0 0 24 24" id="moon">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
@@ -64,6 +68,38 @@
                 
                 <h1>Performing Arts</h1>
             
+                <!-- <a href="#navbar">Skip to links</a> -->
+                <!-- <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                      <button type="button" class="btn btn-secondary"><a href="#entry1">1</a></button>
+                      <button type="button" class="btn btn-secondary"><a href="#entry2">2</a></button>
+                      <button type="button" class="btn btn-secondary"><a href="#entry3">3</a></button>
+                      <button type="button" class="btn btn-secondary"><a href="#entry4">4</a></button>
+                      <button type="button" class="btn btn-secondary"><a href="#entry5">5</a></button>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Second group">
+                      <button type="button" class="btn btn-secondary"><a href = "#navbar" ><i class="fa fa-link" aria-hidden="true"></i></a></button>
+                    </div>
+                </div> -->
+
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                    <button type="button" class="btn btn-secondary btn-sm"><a href="https://github.com/BlackMoFan/artAppreciationLandingPage" target="_blank"><span style="margin: 5px;"><i class="fa fa-github-alt"></i></span></a></button>
+                    <button type="button" class="btn btn-secondary btn-sm"><a href="../index.html"><span style="margin: 5px;"><i class="fa fa-home"></i></span></a></button>
+                    <button type="button" class="btn btn-secondary btn-sm"><a href="members.html"><span style="margin: 5px;"><i class="fa fa-group"></i></span></a></button>
+                  
+                    <div class="btn-group" role="group">
+                      <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Go to:
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" href="#entry1-light">Entry 1</a>
+                        <a class="dropdown-item" href="#entry2-light">Entry 2</a>
+                        <a class="dropdown-item" href="#entry3-light">Entry 3</a>
+                        <a class="dropdown-item" href="#entry4-light">Entry 4</a>
+                        <a class="dropdown-item" href="#entry5-light">Entry 5</a>
+                      </div>
+                    </div>
+                </div>
                 <!-- Content -->
 
                 <!-- Arts here -->
@@ -71,8 +107,8 @@
                     <div class="color-mode__excerpt">
                         <!-- <video class = "imageItem" src="../images/performanceArt/Awareness-entry1.mp4" alt="Awareness" controls></video> -->
 
-                        <div class="iframe-container">
-                            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/q48HN_NSY9Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div id="entry1-light" class="iframe-container">
+                            <!-- <iframe class="responsive-iframe" src="https://www.youtube.com/embed/q48HN_NSY9Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                         </div>
 
                         <!-- <h2><a href="https://en.wikipedia.org/wiki/Mona_Lisa">Mona Lisa<i class="fa fa-external-link" style="margin-left: 10px;"></i></a></h2>
@@ -87,14 +123,14 @@
                             preternatural calm comports with the idealized landscape behind her, which dissolves into the distance through
                             Leonardo’s use of atmospheric perspective.</p> -->
                     </div>
-                    <div class="color-mode__excerpt">
+                    <div id="entry2-light" class="color-mode__excerpt">
                         <img class = "imageItem" src="../images/performanceArt/entry2.jpg" alt="Entry 2" controls>
                         <!-- <h2>Intro Video</h2>
                         <p>Artist: Rod Moreno</p>
                         <p>Medium: afdasfadsmfaufea</p>
                         <p>eoeafeaifoewafe</p> -->
                     </div>
-                    <div class="color-mode__excerpt">
+                    <div id="entry3-light" class="color-mode__excerpt">
                         <img class = "imageItem" src="../images/performanceArt/entry3.jpg" alt="Entry 3">
                         <!-- <h2><a href="https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa">Great Wave Off Kanagawa<i class="fa fa-external-link" style="margin-left: 10px;"></i></a></h2>
                         <p>Artist: Katsushika Hokusai</p>
@@ -107,7 +143,7 @@
                             background. Sometimes assumed to be a tsunami, the wave is more likely to be a large rogue wave.
                             It is Hokusai's most famous work and is often considered the most recognizable work of Japanese art in the world.</p> -->
                     </div>
-                    <div class="color-mode__excerpt">
+                    <div id="entry4-light" class="color-mode__excerpt">
                         <img class = "imageItem" src="../images/performanceArt/entry4.jpg" alt="Entry4">
                         <!-- <h2><a href="https://en.wikipedia.org/wiki/Girl_with_a_Pearl_Earring">Girl with a Pearl Earring<i class="fa fa-external-link" style="margin-left: 10px;"></i></a></h2>
                         <p>Artist: Johannes Vermeer</p>
@@ -120,7 +156,7 @@
                             speaking, Girl isn’t a portrait, but rather an example of the Dutch genre called a tronie—a headshot meant more
                             as still life of facial features than as an attempt to capture a likeness.</p> -->
                     </div>
-                    <div class="color-mode__excerpt">
+                    <div id="entry5-light" class="color-mode__excerpt">
                         <img class = "imageItem" src="../images/performanceArt/entry5.jpg" alt="Entry 5">
                         <!-- <h2><a href="https://en.wikipedia.org/wiki/The_Starry_Night">The Starry Night<i class="fa fa-external-link" style="margin-left: 10px;"></i></a></h2>
                         <p>Artist: Vincent van Gogh</p>
@@ -139,6 +175,38 @@
 
                 <h1>Performing Arts</h1>
 
+                <!-- <a href="#navbar">Skip to links</a> -->
+                <!-- <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                      <button type="button" class="btn btn-secondary"><a href="#entry1">1</a></button>
+                      <button type="button" class="btn btn-secondary"><a href="#entry2">2</a></button>
+                      <button type="button" class="btn btn-secondary"><a href="#entry3">3</a></button>
+                      <button type="button" class="btn btn-secondary"><a href="#entry4">4</a></button>
+                      <button type="button" class="btn btn-secondary"><a href="#entry5">5</a></button>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Second group">
+                      <button type="button" class="btn btn-secondary"><a href = "#navbar" ><i class="fa fa-link" aria-hidden="true"></i></a></button>
+                    </div>
+                </div> -->
+
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                    <button type="button" class="btn btn-secondary btn-sm"><a href="https://github.com/BlackMoFan/artAppreciationLandingPage" target="_blank"><span style="margin: 5px;"><i class="fa fa-github-alt"></i></span></a></button>
+                    <button type="button" class="btn btn-secondary btn-sm"><a href="../index.html"><span style="margin: 5px;"><i class="fa fa-home"></i></span></a></button>
+                    <button type="button" class="btn btn-secondary btn-sm"><a href="members.html"><span style="margin: 5px;"><i class="fa fa-group"></i></span></a></button>
+                  
+                    <div class="btn-group" role="group">
+                      <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Go to:
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" href="#entry1-dark">Entry 1</a>
+                        <a class="dropdown-item" href="#entry2-dark">Entry 2</a>
+                        <a class="dropdown-item" href="#entry3-dark">Entry 3</a>
+                        <a class="dropdown-item" href="#entry4-dark">Entry 4</a>
+                        <a class="dropdown-item" href="#entry5-dark">Entry 5</a>
+                      </div>
+                    </div>
+                </div>
                 <!-- Content -->
 
                 <!-- Arts here -->
@@ -146,8 +214,8 @@
                     <div class="color-mode__excerpt">
                         <!-- <video class = "imageItem" src="../images/performanceArt/Awareness-entry1.mp4" alt="Awareness" controls></video> -->
 
-                        <div class="iframe-container">
-                            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/q48HN_NSY9Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div id="entry1-dark" class="iframe-container">
+                            <!-- <iframe class="responsive-iframe" src="https://www.youtube.com/embed/q48HN_NSY9Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                         </div>
 
                         <!-- <h2><a href="https://en.wikipedia.org/wiki/Mona_Lisa">Mona Lisa<i class="fa fa-external-link" style="margin-left: 10px;"></i></a></h2>
@@ -162,14 +230,14 @@
                             preternatural calm comports with the idealized landscape behind her, which dissolves into the distance through
                             Leonardo’s use of atmospheric perspective.</p> -->
                     </div>
-                    <div class="color-mode__excerpt">
+                    <div id="entry2-dark" class="color-mode__excerpt">
                         <img class = "imageItem" src="../images/performanceArt/entry2.jpg" alt="Entry 2" controls>
                         <!-- <h2>Intro Video</h2>
                         <p>Artist: Rod Moreno</p>
                         <p>Medium: afdasfadsmfaufea</p>
                         <p>eoeafeaifoewafe</p> -->
                     </div>
-                    <div class="color-mode__excerpt">
+                    <div id="entry3-dark" class="color-mode__excerpt">
                         <img class = "imageItem" src="../images/performanceArt/entry3.jpg" alt="Entry 3">
                         <!-- <h2><a href="https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa">Great Wave Off Kanagawa<i class="fa fa-external-link" style="margin-left: 10px;"></i></a></h2>
                         <p>Artist: Katsushika Hokusai</p>
@@ -182,7 +250,7 @@
                             background. Sometimes assumed to be a tsunami, the wave is more likely to be a large rogue wave.
                             It is Hokusai's most famous work and is often considered the most recognizable work of Japanese art in the world.</p> -->
                     </div>
-                    <div class="color-mode__excerpt">
+                    <div id="entry4-dark" class="color-mode__excerpt">
                         <img class = "imageItem" src="../images/performanceArt/entry4.jpg" alt="Entry4">
                         <!-- <h2><a href="https://en.wikipedia.org/wiki/Girl_with_a_Pearl_Earring">Girl with a Pearl Earring<i class="fa fa-external-link" style="margin-left: 10px;"></i></a></h2>
                         <p>Artist: Johannes Vermeer</p>
@@ -195,7 +263,7 @@
                             speaking, Girl isn’t a portrait, but rather an example of the Dutch genre called a tronie—a headshot meant more
                             as still life of facial features than as an attempt to capture a likeness.</p> -->
                     </div>
-                    <div class="color-mode__excerpt">
+                    <div id="entry5-dark" class="color-mode__excerpt">
                         <img class = "imageItem" src="../images/performanceArt/entry5.jpg" alt="Entry 5">
                         <!-- <h2><a href="https://en.wikipedia.org/wiki/The_Starry_Night">The Starry Night<i class="fa fa-external-link" style="margin-left: 10px;"></i></a></h2>
                         <p>Artist: Vincent van Gogh</p>
@@ -209,18 +277,24 @@
                 </div>
             </div>
 
-            <div class="color-mode__link-container">
+            <!-- <div id = "navbar" class="color-mode__link-container">
                 <a href="https://github.com/BlackMoFan/artAppreciationLandingPage" target="_blank" class="color-mode__link fa fa-github-alt">
                     Source Code</a>
                 <a href="../index.html" class="color-mode__link"><span style="margin: 5px;"><i class="fa fa-home"></i></span>Homepage</a>
                 <a href="members.html" class="color-mode__link"><span style="margin: 5px;"><i class="fa fa-group"></i></span>Group Members</a>
-            </div>
+            </div> -->
 
         </section>
 
     </main>
 
     <script src="../js/darkMode.js"></script>
+    <script src="../js/topButton.js"></script>
+
+    <!-- Bootstrap requirements -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>
