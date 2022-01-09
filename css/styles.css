@@ -102,7 +102,7 @@ body::after {
     background-size: cover;
 }
 
-img, video {
+img {
     max-width: 100%;
     height: auto;
     width: auto\9;
@@ -377,7 +377,8 @@ img, video {
     margin-bottom: 1rem;
 }
 
-.iframe-container iframe {
+.iframe-container iframe,
+.iframe-container video {
     position: absolute;
     top: 0;
     left: 0;
