@@ -272,20 +272,28 @@ img {
     /* background-color: #008CBA; */
 }
 
-.header-image-container:hover .overlay {
+/* .header-image-container:hover .overlay {
     opacity: 1;
-}
+} */
 
 .text {
     color: black;
     font-size: 18px;
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
+}
+
+/* the condition @media(hover: hover) checks if the media is capable of hover such as laptops because of cursor then the code inside will run
+depending on the evaluation of the condition*/
+@media(hover: hover) {
+    .header-image-container:hover .overlay {
+        opacity: 1;
+    }
 }
 
 .color-mode h1 {
@@ -457,4 +465,10 @@ img {
 }
 .copyright-text p a{
     color: #ff5e14;
+}
+
+.members-hiraya-def {
+    text-align: center;
+    margin: 5rem;
+    color: #e6e6e6;
 }
