@@ -288,15 +288,6 @@ img {
     text-align: center;
 }
 
-.definition {
-    display: none;
-    padding: 5rem;
-}
-
-.header-image:hover + .definition {
-    display: block;
-}
-
 .color-mode h1 {
     text-align: center;
     font-weight: bold;
