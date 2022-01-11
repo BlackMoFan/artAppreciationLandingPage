@@ -286,6 +286,7 @@ img {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
+    padding: 1rem;
 }
 
 /* the condition @media(hover: hover) checks if the media is capable of hover such as laptops because of cursor then the code inside will run
