@@ -268,7 +268,8 @@ img {
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%)
+    background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+    /* background-color: gray; */
     /* background-color: #008CBA; */
 }
 
@@ -277,16 +278,25 @@ img {
 } */
 
 .text {
-    color: black;
-    font-size: 18px;
-    position: relative;
-    top: 50%;
+    /* color: black;
+    font-size: 18px; */
+    position: absolute;
+    top: 25%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    text-align: center;
-    padding: 1rem;
+    /* text-align: center;
+    padding: 1rem; */
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 30%;
+    object-fit: contain;
+}
+
+.text img {
+    border-radius: 2rem;
 }
 
 /* the condition @media(hover: hover) checks if the media is capable of hover such as laptops because of cursor then the code inside will run
